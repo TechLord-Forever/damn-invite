@@ -11,8 +11,7 @@ BLUE = '\033[94m'
 BOLD = '\033[1m'
 GREEN = '\033[32m'
 YELLOW = '\033[33m'
-OTRO = '\033[36m'
-ENDC = '\033[0m'
+END = '\033[0m'
 
 
 logo = RED+"""                                                                                                                                                                                                     
@@ -30,13 +29,13 @@ logo = RED+"""
 \n\033[1;34mContact me:- https://www.facebook.com/xss.py 
 \n\033[1;34mHappy Hacking..!!            
 --------------------------------------------------------------------
-"""+ENDC
+"""+END
 print logo
 
 a =requests.post("https://www.hackthebox.eu/api/invite/generate")
-print GREEN+a.text+ENDC 
+print GREEN+a.text+END 
 print "\n"
-b = raw_input(BLUE+BOLD+"Type the Base64 code : "+ENDC)
+b = raw_input(BLUE+BOLD+"Type the Base64 code : "+END)
 print "\n"
-print(BLUE+BOLD+"Decoded Code :  {0}".format(YELLOW+b.decode('base64'))+ENDC)
+print(BLUE+BOLD+"Decoded Code :  {0}".format(YELLOW+b.decode('base64'))+END)
 
