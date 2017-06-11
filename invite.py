@@ -1,7 +1,8 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
-#Coded by Sreehari
-#https://www.facebook.com/xss.py
+# Coded by Sreehari
+# https://www.facebook.com/xss.py
 
 import base64
 import requests
@@ -13,8 +14,8 @@ GREEN = '\033[32m'
 YELLOW = '\033[33m'
 END = '\033[0m'
 
-
-logo = RED+"""                                                                                                                                                                                                     
+logo = RED \
+    + """                                                                                                                                                                                                     
 ######                          ###                              
 #     #   ##   #    # #    #     #  #    # #    # # ##### ###### 
 #     #  #  #  ##  ## ##   #     #  ##   # #    # #   #   #      
@@ -26,16 +27,22 @@ logo = RED+"""
          \033[1;34m [+] Hackthebox.gr Invite Code Generator [+]    
                                                                   
 \033[1;34mCoded:-Sreehari Haridas                                 
-\n\033[1;34mContact me:- https://www.facebook.com/xss.py 
-\n\033[1;34mHappy Hacking..!!            
+
+\033[1;34mContact me:- https://www.facebook.com/xss.py 
+
+\033[1;34mHappy Hacking..!!            
 --------------------------------------------------------------------
-"""+END
+""" \
+    + END
 print logo
 
-a =requests.post("https://www.hackthebox.eu/api/invite/generate")
-print GREEN+a.text+END 
-print "\n"
-b = raw_input(BLUE+BOLD+"Type the Base64 code : "+END)
-print "\n"
-print(BLUE+BOLD+"Decoded Code :  {0}".format(YELLOW+b.decode('base64'))+END)
+a = requests.post('https://www.hackthebox.eu/api/invite/generate')
+print GREEN + a.text + END
+print '\n'
+b = raw_input(BLUE + BOLD + 'Type the Base64 code : ' + END)
+print '\n'
+print BLUE + BOLD + 'Decoded Code :  {0}'.format(YELLOW
+        + b.decode('base64')) + END
 
+
+			
